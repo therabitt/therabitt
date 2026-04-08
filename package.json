@@ -1,0 +1,14 @@
+{
+  "name": "therabitt",
+  "version": "1.0.0",
+  "description": "A profile README that looks like a neofetch",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@octokit/rest": "^18.5.5",
+    "dotenv": "^10.0.0",
+    "mustache": "^4.2.0"
+  }
+}

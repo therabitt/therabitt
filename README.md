@@ -2,7 +2,7 @@
 > neofetch
 ```
 
-<img align="left" src="https://i.pinimg.com/736x/04/03/e2/0403e215352a5df099820e4a1a4b2930.jpg" alt="Profile image" width="300" /> 
+<img align="left" src="https://i.pinimg.com/1200x/80/bd/25/80bd25a454fa9852763181549c70f72e.jpg" alt="Profile image" width="300" /> 
 
 ```csharp
 therabitt@github
@@ -15,7 +15,7 @@ therabitt@github
 🎵 Love jazz and blues 
 ☕ Coffee, rain, and the right playlist 
 🌀 Works whenever the mood decides to show up
-💻 Total commits: 12
+💻 Total commits: 13
 ⭐ Total stars gained: 0
 ```
 <p align="left">

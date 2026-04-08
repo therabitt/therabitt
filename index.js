@@ -19,7 +19,7 @@ function calculateTotalStars(data) {
   return data.reduce((sum, repo) => sum + repo.stargazers_count, 0);
 }
 
-async function calculateTotalCommits(data, cutoffDate) {
+async function calculateTotalCommits(data) {
   const githubUsername = process.env.GH_USERNAME;
   let totalCommits = 0;
 
@@ -34,13 +34,10 @@ async function calculateTotalCommits(data, cutoffDate) {
         const contributor = stats.find((item) => item.author.login === githubUsername);
         if (contributor) {
           totalCommits += contributor.weeks
-            .filter((week) => new Date(week.w * 1000) > cutoffDate)
             .reduce((sum, week) => sum + week.c, 0);
         }
       }
-    } catch (e) {
-      // Ignore repos without stats
-    }
+    } catch (e) {}
   }
   return totalCommits;
 }
@@ -54,11 +51,9 @@ async function updateReadme(userData) {
 async function main() {
   const repoData = await grabDataFromAllRepositories();
   const totalStars = calculateTotalStars(repoData);
-  const lastYear = new Date();
-  lastYear.setFullYear(lastYear.getFullYear() - 1);
-  const totalCommitsInPastYear = await calculateTotalCommits(repoData, lastYear);
+  const totalCommits = await calculateTotalCommits(repoData);
   const colors = ["474342", "fbedf6", "c9594d", "f8b9b2", "ae9c9d"];
-  await updateReadme({ totalStars, totalCommitsInPastYear, colors });
+  await updateReadme({ totalStars, totalCommits, colors });
 }
 
 main();

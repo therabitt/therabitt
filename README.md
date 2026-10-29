@@ -15,7 +15,7 @@ therabitt@github
 🎵 Love jazz and blues 
 ☕ Coffee, rain, and the right playlist 
 🌀 Works whenever the mood decides to show up
-💻 Total commits: 167
+💻 Total commits: 223
 ⭐ Total stars gained: 18
 ```
 <p align="left">
